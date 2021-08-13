@@ -313,23 +313,22 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(array) {
-  // const newArr = [];
-
-  // for(let i = 0; i < array.length; i++){
-  //   if(array[i].paintings >= 100){
-  //     console.log(array[i]);
-  //     newArr.push(array[i]);
-  //   }
-  // }
-  
-  
-  const newArr = array.filter(bigPainter => bigPainter.paintings >= 100)
-  const newArr1 = [];
-  for(let i = 0; i < newArr.length; i++){
-    newArr1.push(newArr[i].name);
+  const newArr = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i].paintings >= 100){
+      newArr.push(array[i].name);
+    }
   }
-  return newArr1;
+  return newArr;  
 }
+  /*FORBIDDEN SOLUTION (keeping it here for future reference tho)*/ 
+  // const newArr = array.filter(bigPainter => bigPainter.paintings >= 100)
+  // const returnArr = [];
+  // for(let i = 0; i < newArr.length; i++){
+    // returnArr.push(newArr[i].name);
+  // }
+  // return returnArr;
+
 
 console.log(lotsOfArt(artists));
 /* ***** END OF TASKS ***** */
