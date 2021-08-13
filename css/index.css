@@ -14,12 +14,15 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {  
 margin: 0;  
 padding: 0;  
-border: 0;  
+/* border: 0;   */
 font-size: 100%;  
 font: inherit;  
 vertical-align: baseline;  
 }
 /*GENERAL STYLES*/
+*{
+    /* border: 1px solid gray; */
+}
 html{
     font-size:62.5%;
 }
@@ -133,4 +136,41 @@ button:hover{
 }
 .artist img{
     width:100%;
+}
+
+@media (max-width: 500px){
+    .title-container div {
+        width: 100%;
+        padding: 0% 5%;
+        /* height: 40vh; */
+    }
+    .title-container hr{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    nav{
+        width: 50%;
+    }
+    nav a{
+        font-size: 2rem;
+    }
+    h1{
+        /* font-size: 6rem; */
+        line-height: 1.1;
+        margin-top: 11%;
+    }
+    button{
+        padding: 1.5% 4%;
+        margin-top: 2%;
+    }
+    .artists-container{
+        flex-direction: column;
+    }
+    .artist{
+        width: 100%;
+    }
+    .artist img{
+        width: 100%;
+        
+    }
 }
